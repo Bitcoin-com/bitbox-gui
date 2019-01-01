@@ -30,7 +30,7 @@ class AccountTransactions extends Component {
       }} />)
     }
 
-    let a = bitbox.BitcoinCash.address();
+    let a = bitbox.Address;
     let script = bitbox.Script;
     let ecpair = bitbox.ECPair;
     let blocks = [];
@@ -41,7 +41,7 @@ class AccountTransactions extends Component {
         account.addresses.chains.forEach((chain, indx) => {
           chain.addresses.forEach((addy, ind) => {
             if(this.props.configuration.displayCashaddr) {
-              addy = bitbox.Address.toCashAddress(addy);
+              addy = a.toCashAddress(addy);
             }
 
             tx.inputs.forEach((input) => {
