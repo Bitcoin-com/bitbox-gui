@@ -151,7 +151,7 @@ class Miner {
   static mineBlock() {
     console.log('mining block')
 
-    let a = bitbox.BitcoinCash.address();
+    let a = bitbox.Address;
     let script = bitbox.Script;
     let ecpair = bitbox.ECPair;
     let state = reduxStore.getState();
