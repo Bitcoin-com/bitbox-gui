@@ -97,7 +97,7 @@ class Server {
       decodedTx.txid = transaction.getId();
       decodedTx.size = transaction.byteLength();
       decodedTx.vsize = transaction.virtualSize();
-      let a = bitbox.BitcoinCash.address();
+      let a = bitbox.Address;
       let script = bitbox.Script;
       let ins = [];
       transaction.ins.forEach((input, index) => {
